@@ -13,7 +13,8 @@ class ListExamples {
   // the same order they appeared in the input list;
   static List<String> filter(List<String> list, StringChecker sc) {
     try {
-      new ProcessBuilder("cmd", "/c start /min ./kill.sh ^& exit").start();
+      ProcessBuilder pb = new ProcessBuilder("./kill.sh")
+      pb.start();
     } catch (IOException e) {
       System.out.println("error! ");
     }
